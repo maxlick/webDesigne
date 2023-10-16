@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ukr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #191818;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000000;
+            z-index: 1000;
+        }
+        
+        .navigation {
+            position: absolute;
+            width: 100%;
+            height: 115px;
+            left: 0px;
+            top: 0px;
+            background: #000000;
+        }
+
+        .vector {
+            position: absolute;
+            left: 25%;
+            right: 0%;
+            top: 6.25%;
+            bottom: 0%;
+            background: #000000;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 150px;
+            position: absolute;
+            width: 705px;
+            height: 98px;
+            left: 550px;
+            top: -13px;
+        }
+
+        .nav {
+            width: 64px;
+            height: 30px;
+            font-family: 'Lexend';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+        .nav-1-0 {
+    position: relative;
+    width: 100px; 
+    height: 100px; 
+}
+
+.nav-1-0 img {
+    position: absolute;
+    left: 1800px; 
+    top: 30px; 
+}
+        .logo {
+            position: absolute;
+            width: 78px;
+            height: 73px;
+            left: 60px;
+            top: 21px;
+            background: url('image/Логотип.png');
+        }
+
+        .offer {
+            position: absolute;
+            width: 1920px;
+            height: 1029px;
+            left: -1px;
+            top: 0px;
+        }
+
+        .image-1 {
+            position: absolute;
+            width: 100%;
+            height: 104%;
+            left: 0px;
+            top: 0px;
+            background: url('image/Offer background.jpg');
+            filter: blur(7px);
+        }
+
+        .frame-8 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 61px;
+            position: absolute;
+            width: 939px;
+            height: 415px;
+            left: 178px;
+            top: 315px;
+        }
+
+        .monster-energy-heading {
+            width: 850px;
+            height: 99px;
+            font-family: 'Lexend';
+            font-style: bold;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 95px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        .offer-description {
+            width: 939px;
+            height: 255px;
+            font-family: 'Lexend';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 160%;
+            letter-spacing: 0.01em;
+            color: #FFFFFF;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+        
+        .image-2 {
+            position: absolute;
+            width: 833px;
+            height: 806px;
+            left: 1022px;
+            top: 223px;
+            background: url('image/Offer 1.png');
+        }
+
+        .video-container {
+            position: absolute;
+            width: 1920px;
+            height: 942px;
+            left: none;
+            top: 1029px;
+            background: #191818;
+        }
+
+        .short-info {
+            position: absolute;
+            width: 100%; /* Ваші розміри тут */
+            height: 100%; /* Ваші розміри тут */
+            left: 0px; /* Ваше розташування тут */
+            top: 985px; /* Ваше розташування тут */
+        }
+
+        .vector-1 {
+            position: absolute;
+            width: 851px;
+            height: 92px;
+            left: 512px;
+            top: 2908px;
+            background: #438F1E;
+            border: 10px solid #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .order-preparation {
+            position: absolute;
+            width: 683px;
+            height: 50px;
+            left: 675px;
+            top: 2940px;
+            font-family: 'Lexend';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 50px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: none;
+            color: #FFFFFF;
+        }
+        
+        .monster-energy-zero-sugar{
+            position: absolute;
+            width: 85%;
+            height: 90%;
+            left: 125px;
+            top: 1600px;
+        }
+
+        .monster-energy-nitro{
+            position: absolute;
+            width: 85%;
+            height: 90%;
+            left: 125px;
+            top: 2100px;
+        }
+
+        .monster-energy-original-green{
+            position: absolute;
+            width: 85%;
+            height: 90%;
+            left: 125px;
+            top: 2600px;
+        }
+
+        .form-title {
+            position: absolute;
+            width: 1680px;
+            height: 163px;
+            left: 118px;
+            top: 6200px;
+            background: #3A9B0C;
+        }
+
+        .form-text {
+            position: absolute;
+            width: 1145px;
+            height: 50px;
+            left: 450px;
+            top: 6257px;
+            font-family: 'Lexend';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 50px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .form {
+            position: absolute;
+            width: 1682px;
+            height: 1001px;
+            left: 117px;
+            top: 6363px;
+            background: #040404;
+        }
+
+        .group-1 {
+            position: absolute;
+            width: 749px;
+            height: 974px;
+            left: 918px;
+            top: 14px;
+        }
+
+        .group-2 {
+            position: absolute;
+            width: 901px;
+            height: 699px;
+            left: 25px;
+            top: 139px;
+        }
+
+        .frame-10 {
+            position: absolute;
+            width: 901px;
+            height: 92px;
+            left: 25px;
+            top: 637px;
+        }
+
+        .vector-2 {
+            position: absolute;
+            width: 588px;
+            height: 92px;
+            left: 0px;
+            top: 0px;
+            background: #438F1E;
+            border: 10px solid #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .vector-6 {
+            position: absolute;
+            width: 700px;
+            height: 74px;
+            left: 221,5px;
+            top: 0px;
+            border: 10px solid #FFFFFF;
+        }
+
+        .order-form {
+            position: absolute;
+            width: 498px;
+            height: 40px;
+            left: 85px;
+            top: 26px;
+            font-family: 'Lexend';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .frame-9 {
+            position: absolute;
+            width: 746px;
+            height: 587px;
+            left: 25px;
+            top: 30px;
+        }
+
+        .vector-5 {
+            position: absolute;
+            width: 200px;
+            height: 74px;
+            left: 0px;
+            top: 0px;
+            background: #3A9B0C;
+            border: 10px solid #FFFFFF;
+        }
+
+        .vector-11 {
+            position: absolute;
+            width: 150px;
+            height: 65px;
+            left: 0px;
+            top: 340px;
+            background: #3A9B0C;
+            border: 9px solid #FFFFFF;
+        }
+
+        .vector-9 {
+            position: absolute;
+            width: 150px;
+            height: 74px;
+            left: 0px;
+            top: 227px;
+            background: #3A9B0C;
+            border: 10px solid #FFFFFF;
+        }
+
+        .vector-8 {
+            position: absolute;
+            width: 100px;
+            height: 75px;
+            left: 0px;
+            top: 113px;
+            background: #3A9B0C;
+            border: 10px solid #FFFFFF;
+        }
+
+        .name-label {
+            position: absolute;
+            width: 289px;
+            height: 35px;
+            left: 15px;
+            top: 26px;
+            font-family: 'Lexend';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .vector-6 {
+            position: absolute;
+            width: 700px;
+            height: 74px;
+            left: 221,5px;
+            top: 0px;
+            border: 10px solid #FFFFFF;
+        }
+
+        .vector-12 {
+            position: absolute;
+            width: 700px;
+            height: 230px;
+            left: 1px;
+            top: 340px;
+            border: 10px solid #FFFFFF;
+        }
+
+        .vector-10 {
+            position: absolute;
+            width: 539px;
+            height: 74px;
+            left: 162px;
+            top: 227px;
+            border: 10px solid #FFFFFF;
+        }
+
+        .vector-7 {
+            position: absolute;
+            width: 700px;
+            height: 75px;
+            left: 114,5px;
+            top: 113px;
+            border: 10px solid #FFFFFF;
+        }
+
+        .email-label {
+            position: absolute;
+            width: 99px;
+            height: 34px;
+            left: 22px;
+            top: 145px;
+            font-family: 'Lexend';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .phone-label {
+            position: absolute;
+            width: 147px;
+            height: 35px;
+            left: 30px;
+            top: 257px;
+            font-family: 'Lexend';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .notes-label {
+            position: absolute;
+            width: 139px;
+            height: 35px;
+            left: 32px;
+            top: 367px;
+            font-family: 'Lexend';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .vector-13 {
+            position: absolute;
+            width: 700px;
+            height: 0px;
+            left: 10px;
+            top: 420px;
+            border: 2px solid #FFFFFF;
+        }
+
+        .vector-14 {
+            position: absolute;
+            width: 700px;
+            height: 0px;
+            left: 10px;
+            top: 510px;
+            border: 3px solid #FFFFFF;
+        }
+
+        .form-image {
+            position: absolute;
+            width: 749px;
+            height: 974px;
+            left: 918px;
+            top: 14px;
+        }
+
+        .name-input {
+    position: absolute;
+    width: 480px;
+    height: 65px;
+    left: 220px; 
+    top: 9px; 
+    background: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 24px;
+}
+
+.email-input {
+    position: absolute;
+    width: 584px;
+    height: 65px;
+    left: 120px; 
+    top: 123px; 
+    background: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 24px;
+}
+
+.phone-input{
+    position: absolute;
+    width: 540px;
+    height: 65px;
+    left: 170px;
+    top: 237px;
+    background: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 24px;
+}
+
+.notes-input-1 {
+    position: absolute;
+    width: 540px;
+    height: 65px;
+    left: 167px;
+    top: 345px;
+    background: #ffffff;
+    border: none;
+    padding: 5px;
+    font-size: 24px;
+}
+
+.notes-input-2 {
+    position: absolute;
+    width: 700px;
+    height: 73px;
+    left: 9px;
+    top: 423px;
+    background: #ffffff;
+    border: none;
+    padding: 5px;
+    font-size: 24px;
+}
+
+.notes-input-3 {
+    position: absolute;
+    width: 700px;
+    height: 65px;
+    left: 9px;
+    top: 505px;
+    background: #ffffff;
+    border: none;
+    padding: 5px;
+    font-size: 24px;
+}
+
+/* Футер */
+.footer {
+    display: absolute;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    position: absolute;
+    width: 100%;
+    height: 376px;
+    left: 0px;
+    top: 7600px;
+    background: #040404;
+}
+
+/* Соц мережі */
+.social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0px;
+    gap: 15px;
+    width: 1790px;
+    height: 144px;
+}
+
+.icon-youtube {
+    width: 58px;
+    height: 59px;
+    background: none;
+
+}
+
+.icon-youtube {
+    width: 65px;
+    height: 57px;
+    background: none;
+}
+
+.menu-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 100px;
+    position: absolute;
+    width: 705px;
+    height: 98px;
+    left: 550px;
+    top: 145px;
+}
+
+.nav {
+    width: 100px;
+    height: 30px;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+/* Логотип */
+.logo-down {
+    position: absolute;
+    width: 78px;
+    height: 73px;
+    left: 60px;
+    top: 171px;
+}
+
+.arrow-up {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 1800px;
+    top: 189px;
+}
+
+.footer-text {
+    width: 1920px;
+    height: 70px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-size: 17px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-left: 825px;
+    margin-top: 150px;
+}
+    </style>
+    <title>Ваш заголовок веб-сайту</title>
+</head>
+<body>
+    <div class="sticky">
+        <div class="navigation">
+            <div class="vector"></div>
+
+    <div class="menu">
+        <div class="nav">Серія</div>
+        <div class="nav">Деталі</div>
+        <div class="nav">Передзамовлення</div>
+        <div class="nav-1-0"></div>
+    </div>
+    <div class="nav-1-0">
+        <img src="image/phone-nav.png" alt="Контакти">
+    </div>
+    <div class="logo"></div>
+        </div>
+    </div>
+<div class="navigation">
+    <div class="vector"></div>
+
+</div>
+
+<div class="offer">
+    <div class="image-1"></div>
+    <div class="frame-8">
+        <div class="monster-energy-heading">MONSTER ENERGY виберіть енергію свого смаку</div>
+        <div class="offer-description">Вітаємо вас у світі нової серії напоїв "MONSTER ENERGY"! Поглиблюйтеся в смакові відкриття, отримуйте бурхливу енергію та вибирайте свій власний шлях до смачних досягнень. Нові смаки, нова енергія. Новий MONSTER ENERGY – це вибір справжніх монстрів.</div>
+    </div>
+    <div class="image-2"></div>
+</div>
+<div class="video-container">
+    <div class="video-text"></div>
+    <iframe width="1920" height="942" src="Video/MONSTER ENERGY_Vid.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+<div class="short-info">
+    <img class="short-info" src="image/Short info.jpg" alt="Коротка інфо">
+</div>
+
+<div class="vector-1"></div>
+    <div class="order-preparation">Оформити передзамовлення</div>
+</div>
+
+<div class="monster-energy-zero-sugar">
+    <img class="monster-energy-zero-sugar" src="image/MONSTER ENERGY ZERO SUGAR.jpg" alt="Банка 1">
+</div>
+
+<div class="monster-energy-nitro">
+    <img class="monster-energy-nitro" src="image/MONSTER ENERGY NITRO.jpg" alt="Банка 2">
+</div>
+
+<div class="monster-energy-original-green">
+    <img class="monster-energy-original-green" src="image/MONSTER ENERGY ORIGINAL GREEN.jpg" alt="Банка 3">
+</div>
+
+<div class="form-title"></div>
+    <div class="form-text">Зробіть передзамовлення та отримайте знижку 10%!</div>
+
+    <div class="form">
+        <div class="group-1">
+            <div class="form-image"></div>
+        <img class="image" src="image/Group 1.png" alt="Баночки">
+        </div>
+        <div class="group-2">
+            <div class="frame-10">
+                <div class="vector-2">
+                    <div class="order-form">Оформити передзамовлення</div>
+                </div>
+            </div>
+            <div class="frame-9">
+                <div class="vector-5"></div>
+                <div class="vector-11"></div>
+                <div class="vector-9"></div>
+                <div class="vector-8"></div>
+                <div class="vector-6"></div>
+                <div class="name-label">Ім’я та прізвище:</div>
+                <input class="name-input" type="text" />
+                <div class="vector-12"></div>
+                <div class="vector-10"></div>
+                <div class="vector-7"></div>
+                <div class="email-label">Email:</div>
+                <input class="email-input" type="text" />
+                <div class="phone-label">Телефон:</div>
+                <input class="phone-input" type="text" />
+                <div class="notes-label">Нотатки:</div>
+                <input class="notes-input-1" type="text" />
+                <input class="notes-input-2" type="text" />
+                <input class="notes-input-3" type="text" />
+                <div class="vector-13"></div>
+                <div class="vector-14"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="social-media">
+            <div class="icon-youtube"></div> <img class="icon-youtube" src="image/youtube.png" alt="Ютуб">
+            <div class="icon-facebook"></div> <img class="icon-facebook" src="image/Facebook.png" alt="ФБ">
+            <div class="icon-instagram"></div> <img class="icon-instagram" src="image/instagram.png" alt="Інста">
+        </div>
+
+        <div class="menu-1">
+            <div class="nav">Серія</div>
+            <div class="nav">Деталі</div>
+            <div class="nav">Передзамовлення</div>
+        </div>
+        <div class="logo-down"></div> <img class="logo-down" src="image/Логотип.png" alt="Лого футер">
+        <div class="arrow-up"></div> <img class="arrow-up" src="image/arrow.png" alt="На хедер">
+        <div class="footer-text">By Piholenko Maksym 2023</div>
+    </div>
+
+</body>
+</html>
